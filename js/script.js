@@ -42,9 +42,8 @@ var randomQuote;
 function getRandomQuote(){
   var pullQuote = quotes[Math.floor(Math.random()*quotes.length)];
   randomQuote = '';
-  randomQuote += '<h1> "' + pullQuote.quote + '"</h1>';
-  randomQuote += '<h1> -' + pullQuote.source + '</h1>';
-  randomQuote += '<h1> -' + pullQuote.year+ '</h1>';
+  randomQuote += '<p class="quote">' + pullQuote.quote + '</p>';
+  randomQuote +='<p class="source">'+ pullQuote.source+ '<span class="year">'+ pullQuote.year + '</span></p>';
   return randomQuote;
 };
 /***
@@ -62,4 +61,4 @@ printQuote();
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-//document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
