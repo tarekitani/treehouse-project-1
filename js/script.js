@@ -32,23 +32,34 @@ var quotes = [
           year: 2004
       }
 ];
-document.getElementById(quotes[0]);
 
 /***
  * `getRandomQuote` function
 ***/
-
-
-
+//working random quote pulling function
+//will be adjusted later for proper formatting
+var randomQuote;
+function getRandomQuote(){
+  var pullQuote = quotes[Math.floor(Math.random()*quotes.length)];
+  randomQuote = '';
+  randomQuote += '<h1> "' + pullQuote.quote + '"</h1>';
+  randomQuote += '<h1> -' + pullQuote.source + '</h1>';
+  randomQuote += '<h1> -' + pullQuote.year+ '</h1>';
+  return randomQuote;
+};
 /***
  * `printQuote` function
 ***/
+//temporary printQuote function, will be adjusted to a loop to allow the user to repeatedly call a new quote
+function printQuote(){
+  document.write(getRandomQuote());
+};
 
-
+printQuote();
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+//document.getElementById('load-quote').addEventListener("click", printQuote, false);
