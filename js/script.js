@@ -51,11 +51,9 @@ function getRandomQuote(){
 ***/
 //temporary printQuote function, will be adjusted to a loop to allow the user to repeatedly call a new quote
 function printQuote(){
-  document.write(getRandomQuote());
+  document.getElementById(getRandomQuote());
 };
-
 printQuote();
-
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
